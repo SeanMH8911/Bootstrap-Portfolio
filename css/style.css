@@ -18,6 +18,12 @@ p {
     color: white;
 }
 
+a{
+    text-decoration: none;
+}
+a:hover{
+     text-decoration: none;
+}
 
 body {
     font-family: sans-serif;
@@ -39,6 +45,9 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay:hover{
+    display: none;
 }
 .card-title{
     display: flex;
@@ -67,18 +76,10 @@ body {
     top: 0;
     right: 4px;
     background-color: var(--secondary-color);
-    padding: 15px;
+    padding: 10px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    z-index: 10;
-}
-.main-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
 }
 
 
@@ -89,7 +90,7 @@ body {
     background-color: transparent;
     width: 100%;
     height: 100%;
-    /* perspective: 1000px; */
+    position: relative;
 }
 
 .flip-card-content {
@@ -129,11 +130,100 @@ body {
     transform: rotateY(180deg);
 }
 
-.btn {
+.btns a {
     width: 100px;
     margin: 0 10px;
 }
 /******* Flip cards end ******/
+
+/****** cube animation start ******/
+.cube-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateX('-30deg');
+    animation: animate 5s linear infinite;
+
+}
+
+@keyframes animate{
+0%{
+    transform: rotateX(-30deg) rotateY(0deg);
+}
+100%{
+    transform: rotateX(-30deg) rotateY(360deg);
+}
+
+}
+
+.cube div {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(125, 83, 222), #af46c9, #d03bb0, #e53996, #f0437e);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.cube div span h2{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    transform: translateZ(30px);
+}
+.cube div span h2:nth-child(1){
+transform: translateZ(0) translateY(10px);
+color: rgba(0, 0, 0, 0.2)
+}
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150;
+    height: 150;
+    background: rgb(125, 83, 222);
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.top::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #f0437e;
+    transform: translateZ(-220px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(125,83,222,0.2),
+    0 0 200px rgba(125,83,222,0.4),
+    0 0 300px rgba(125,83,222,0.6),
+    0 0 400px rgba(125,83,222,0.8),
+    0 0 500px rgba(125,83,222,1),
+
+}
+/****** cube animation end ******/
 
 
 /******* Images for cards start ******/
@@ -298,6 +388,7 @@ body {
 
 .social-profiles ul li a:hover {
     color: var(--secondary-color);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .7);
 }
 
 .copywrite {
@@ -445,3 +536,14 @@ body {
 /******* Menu section end *****/
 
 
+/************** Hire Me Page CSS start *****************/
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills i {
+    margin: 50px;
+    font-size: 40px;
+}
+/************** Hire Me Page CSS End *****************/

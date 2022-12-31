@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #7D53DE;
+    --secondary-color: #f0437e;
+    --primary: ##EEF8FF;
+}
+
+h1,
+h2,
+h3,
+h4,
+figure,
+p {
+    margin:0;
+    color: white;
+}
+
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+.cards{
+    padding: 0;
+    height: 50vh;
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.card-title:hover{
+    transition: background-color 0.5s ease;
+    transition: opacity 0.5s ease;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 1;
+}
+
+.project-tab{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 10;
+}
+.main-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+/******* Flip cards start ******/
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    /* perspective: 1000px; */
+}
+
+.flip-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-content {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--background-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.btn {
+    width: 100px;
+    margin: 0 10px;
+}
+/******* Flip cards end ******/
+
+
+/******* Images for cards start ******/
+.card-1 {
+    background-image: url(../images/coding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-2 {
+    background-image: url(../images/setup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-3 {
+    background-image: url(../images/hobby.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-4 {
+    background-image: url(../images/ampersand.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-5 {
+    background-image: url(../images/blackjack.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-6 {
+    background-image: url(../images/esi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-7 {
+    background-image: url(../images/ignite.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card-8 {
+    background-image: url(../images/githu.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/******* Images for cards end ******/
+
+
+
+
+.site-branding {
+    transition: all .5s;
+}
+.site-title {
+    text-align: center;
+}
+.site-title img{
+    margin: 0;
+    width: 60px;
+    margin-top: 20px;
+}
+
+.site-navigation .site-title a {
+    display: block;
+}
+
+/******Hamburger Menu start*****/
+.hamburger-menu .menu-icon,
+.hamburger-menu .menu-close-icon {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hamburger-menu.close .menu-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+.menu-close-icon.show {
+    visibility:visible;
+    opacity: 1;
+}
+
+.hamburger-menu.close {
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+.hamburger-menu img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+/******Hamburger Menu end*****/
+
+
+/******* Menu section start *****/
+.site-navigation {
+    transition: all .5s;
+}
+
+.main-menu {
+    padding: 15px 30px;
+    margin: 0;
+}
+
+.main-menu li {
+    display: block;
+    padding: 12px 0;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.main-menu li:nth-last-of-type(1) {
+    border-bottom: 0;
+}
+
+.main-menu li a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all 0.35s;
+}
+
+.main-menu li a:hover,
+.main-menu li.current-menu-item a {
+    color: var(--secondary-color);
+}
+
+/******* Social profile start ******/
+.social-profiles ul {
+    padding: 10px 0 34px 0;
+    margin: 0;
+}
+
+.social-profiles ul li {
+    display: block;
+    padding: 0 18px;
+    font-size: 1rem;
+}
+
+.social-profiles ul li a {
+    color: #191919;
+    transition: all 0.35s;
+}
+
+.social-profiles ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.copywrite {
+    color: black;
+    padding: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 15px 30px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, .09);
+    }
+
+    .site-header,
+    .hamburger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        flex-flow: column;
+    }
+
+    .hamburger-menu .menu-icon,
+    .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: 46px;
+        right: 24px;
+    }
+
+    .main-menu li {
+        position: relative;
+    }
+
+
+    .site-navigation {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, .09);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+
+    .site-navigation.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .social-profiles ul {
+        padding: 15px 30px;
+        margin: 0;
+    }
+    .social-profiles ul:first-child {
+        padding-left:15px;
+    }
+
+    .copywrite {
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .site-header,
+    .site-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 80px;
+        height: 100vh;
+        padding: 0 15px;
+        box-shadow: 6px 0 12px rgba(0, 0, 0, .05);
+    }
+
+    .site-navigation {
+        background: #f7f7f7;
+    }
+
+    .site-navigation.show {
+        left: 80px;
+    }
+
+    .site-header {
+        background: #fff;
+    }
+
+    .site-header.no-shadow {
+        box-shadow: none;
+    }
+
+    .site-header .site-branding.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .site-title {
+        padding: 28px 0 10px 0;
+    }
+
+    .hamburger-menu .menu-icon,
+    .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: calc(50vh - 22px);
+        left: 15px;
+        width: calc(100% - 30px);
+        padding: 10px 0;
+    }
+
+    .site-navigation {
+        left: -250px;
+        z-index: 99;
+        width: 250px;
+        padding: 0;
+        box-shadow: 16px 0 42px rgba(0, 0, 0, .09);
+    }
+
+    .main-menu {
+        height: 50vh;
+        padding: 0;
+    }
+
+    .main-menu li {
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    .social-profiles ul li {
+        font-size: 1.125rem;
+    }
+}
+/******* Menu section end *****/
+
+

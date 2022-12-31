@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Howe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div id="site-branding" class="site-branding">
+            <a class="site-title" href="/" rel="home"><img src="./images/profile-pic.png" alt="profile picture"></a>
+        </div>
+        <div id="hamburger-menu" class="hamburger-menu">
+            <div class="menu-icon" onclick="openMenu()">
+                <img src="./images/menu.png" alt="menu icon">
+            </div>
+            <div id="menu-close-icon" class="menu-close-icon">
+                <img src="./images/close.png" alt="menu close icon">
+            </div>
+        </div>
+    </header>
+    <nav id="site-navigation" class="site-navigation d-flex flex-column justify-content-between">
+        <div class="site-branding d-none d-lg-block ">
+            <h1 class="site-title"><a href="/" rel="home">Sean Howe</a></h1>
+        </div>
+        <ul class="main-menu d-flex flex-column justify-content-center">
+            <li class="current-menu-item"><a href="index.html">Home</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Resume</a></li>
+
+        </ul>
+        <div class="social-profiles">
+            <ul class="d-flex justify-content-start justify-content-lg-center align-items-center">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+        <p class="copywrite">
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved |
+            made by <a href="/" target="_blank">Sean Howe</a>
+        </p>
+
+    </nav>
+    <main class="container-fluid">
+
+    </main>
+
+
+    <footer>
+        <script src="./index.js"></script>
+    </footer>
+</body>
+
+</html>

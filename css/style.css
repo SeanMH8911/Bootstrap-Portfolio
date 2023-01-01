@@ -17,6 +17,13 @@ p {
     margin:0;
     color: white;
 }
+h3{
+    font-size: 26px!important;
+}
+p{
+    font-size: 16px!important;
+}
+
 
 a{
     text-decoration: none;
@@ -30,19 +37,6 @@ body {
 }
 
 
-/******** Loading bar start *******/
-#myProgress{
-    width: 100%;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-}
-#myBar {
-    width: 1%;
-    height: 10px;
-    background-color: var(--secondary-color);
-}
-/******** Loading bar end *******/
 .cards{
     padding: 0;
     height: 50vh;

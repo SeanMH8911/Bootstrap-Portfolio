@@ -30,14 +30,28 @@ body {
 }
 
 
-
+/******** Loading bar start *******/
+#myProgress{
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+}
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: var(--secondary-color);
+}
+/******** Loading bar end *******/
 .cards{
     padding: 0;
     height: 50vh;
     cursor: pointer;
     background-color: var(--primary);
 }
-
+.cards:nth-child(-n +2) {
+cursor:default;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -537,13 +551,33 @@ color: rgba(0, 0, 0, 0.2)
 
 
 /************** Hire Me Page CSS start *****************/
+#hireme-body main h2 {
+color: black;
+}
 .skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .skills i {
-    margin: 50px;
-    font-size: 40px;
+    margin:0 20px;
+    font-size: 50px;
+}
+.title-line{
+    width: 80%;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 992px){
+    main{
+        margin-top: 200px;
+    }
+    .skills {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 4px;
+    }
+    .skills i {
+        margin-top: 10px;
+        font-size: 40px;
+    }
 }
 /************** Hire Me Page CSS End *****************/

@@ -4,6 +4,7 @@ const menu = document.getElementById("site-navigation");
 const burgerMenu = document.getElementById("hamburger-menu");
 const siteHeader = document.getElementById("site-branding");
 const menuClose = document.getElementById("menu-close-icon");
+const menuTab = document.querySelectorAll("#menu-tab");
 
 function openMenu() {
   menu.classList.toggle("show");
@@ -18,6 +19,12 @@ menuClose.addEventListener("click", function closeMenu() {
   siteHeader.classList.remove("hide");
   menuClose.classList.remove("show");
 });
+
+function closeNav() {
+  menu.classList.remove("show");
+  burgerMenu.classList.remove("close");
+  menuClose.classList.remove("show");
+}
 
 // End control for navigation bar
 var TxtType = function (el, toRotate, period) {

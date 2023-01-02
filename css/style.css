@@ -24,10 +24,10 @@ p {
     color: white;
 }
 h3{
-    font-size: 26px!important;
+    font-size: 20px!important;
 }
 p{
-    font-size: 16px!important;
+    font-size: 12px!important;
 }
 
 
@@ -107,6 +107,9 @@ cursor:default;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     z-index: 2;
+}
+.project-tab p {
+    font-size: 14px!important;
 }
 
 
@@ -220,7 +223,7 @@ cursor:default;
 }
 .cube div span h2{
     position: absolute;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     transform: translateZ(50px);
 }
@@ -232,8 +235,8 @@ color: rgba(0, 0, 0, 0.2)
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: rgb(125, 83, 222);
     transform: rotateX(90deg) translateZ(150px);
     display: flex;
@@ -350,7 +353,7 @@ color: rgba(0, 0, 0, 0.2)
 }
 .site-title img{
     margin: 0;
-    width: 60px;
+    width: 50px;
     margin-top: 20px;
 }
 
@@ -391,7 +394,7 @@ color: rgba(0, 0, 0, 0.2)
 .hamburger-menu img {
     display: block;
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
 }
 
 /******Hamburger Menu end*****/
@@ -440,7 +443,7 @@ color: rgba(0, 0, 0, 0.2)
 .social-profiles ul li {
     display: block;
     padding: 0 18px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .social-profiles ul li a {
@@ -486,15 +489,17 @@ color: rgba(0, 0, 0, 0.2)
         top: 46px;
         right: 24px;
     }
-
+    main{
+        margin-left: 0;
+    }
     .main-menu li {
         position: relative;
     }
 
 
     .site-navigation {
-        position: absolute;
-        top: 78px;
+        position: fixed;
+        top: 100px;
         left: 0;
         z-index: 99;
         width: 100%;
@@ -591,7 +596,7 @@ color: rgba(0, 0, 0, 0.2)
     }
 
     .social-profiles ul li {
-        font-size: 1.125rem;
+        font-size: 18px;
     }
 }
 /******* Menu section end *****/
@@ -616,7 +621,7 @@ min-width: 280px;
 }
 .hire-content p{
 padding: 0 10px ;
-font-size: 22px!important;
+font-size: 18px!important;
 min-width: 60%
 }
 #hire-me{
@@ -627,6 +632,7 @@ min-width: 60%
     border: 3px solid var(--sixth-color);
     border-radius: 12px;
     padding: 30px;
+    margin-top: 50px;
 }
 .skills i {
     margin:0 20px;
@@ -642,6 +648,7 @@ min-width: 60%
     color: var(--secondary-color);
 }
 @media screen and (max-width: 992px){
+   
     #hire-me{
        height: auto;
     }
@@ -665,10 +672,11 @@ min-width: 60%
     .skills {
         border: none;
         padding: 0;
+        margin-top: 50px;
     }
     .skills i {
         margin: 0px 2px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 /************** About Me section CSS End *****************/

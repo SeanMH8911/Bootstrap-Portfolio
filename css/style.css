@@ -1,11 +1,17 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 :root {
-    --background-color: #7D53DE;
-    --secondary-color: #f0437e;
-    --primary: ##EEF8FF;
+    --background-color: #1A1A1D;
+    --primary-color: #1A1A1D;
+    --secondary-color: #ff0055;
+    --third-color: #4E4E50;
+    --forth-color:#6F2232;
+    --fifth-color:#950740;
+    --sixth-color:#C3073F;
 }
 
 h1,
@@ -35,15 +41,30 @@ a:hover{
 body {
     font-family: sans-serif;
 }
+main {
+    background-color: var(--primary-color);
+}
 
 
+
+/******* Hero section start ********/
+#hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/******* Hero section end ********/
 .cards{
     padding: 0;
     height: 50vh;
     cursor: pointer;
-    background-color: var(--primary);
+    background-color: var(--background-color);
 }
-.cards:nth-child(-n +2) {
+.cards:nth-child(-n +3) {
 cursor:default;
 }
 .overlay {
@@ -53,10 +74,9 @@ cursor:default;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
-.overlay:hover{
-    display: none;
-}
+
 .card-title{
     display: flex;
     justify-content: center;
@@ -124,7 +144,6 @@ cursor:default;
 }
 
 .flip-card-front {
-    background-color: #bbb;
     color: black;
 }
 
@@ -141,6 +160,12 @@ cursor:default;
 .btns a {
     width: 100px;
     margin: 0 10px;
+    background-color: transparent!important;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+}
+.btns a:hover {
+    background-color: var(--secondary-color)!important;
 }
 /******* Flip cards end ******/
 
@@ -154,8 +179,8 @@ cursor:default;
 
 .cube {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     transform-style: preserve-3d;
     transform: rotateX('-30deg');
     animation: animate 5s linear infinite;
@@ -188,7 +213,7 @@ cursor:default;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to bottom, rgb(125, 83, 222), #af46c9, #d03bb0, #e53996, #f0437e);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,9 +221,9 @@ cursor:default;
 }
 .cube div span h2{
     position: absolute;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
-    transform: translateZ(30px);
+    transform: translateZ(50px);
 }
 .cube div span h2:nth-child(1){
 transform: translateZ(0) translateY(10px);
@@ -208,10 +233,16 @@ color: rgba(0, 0, 0, 0.2)
     position: absolute;
     top: 0;
     left: 0;
-    width: 150;
-    height: 150;
+    width: 300px;
+    height: 300px;
     background: rgb(125, 83, 222);
-    transform: rotateX(90deg) translateZ(75px);
+    transform: rotateX(90deg) translateZ(150px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.top h2{
+    text-shadow: 1px 1px 10px var(--background-color);
 }
 
 .top::before{
@@ -219,10 +250,10 @@ color: rgba(0, 0, 0, 0.2)
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     background-color: #f0437e;
-    transform: translateZ(-220px);
+    transform: translateZ(-460px);
     filter: blur(20px);
     box-shadow: 0 0 120px rgba(125,83,222,0.2),
     0 0 200px rgba(125,83,222,0.4),
@@ -230,6 +261,29 @@ color: rgba(0, 0, 0, 0.2)
     0 0 400px rgba(125,83,222,0.8),
     0 0 500px rgba(125,83,222,1),
 
+}
+@media screen and (max-width: 992px){
+    .cube div span h2{
+        font-size: 30px;
+        transform: translateZ(30px);
+    }
+    .cube {
+            width: 200px;
+            height: 200px;
+        }
+    .cube div span {
+            transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+        }
+    .top {
+            width: 200px;
+            height: 200px;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+    .top::before {
+            width: 220px;
+            height: 220px;
+            transform: translateZ(-300px);
+        }
 }
 /****** cube animation end ******/
 
@@ -291,6 +345,7 @@ color: rgba(0, 0, 0, 0.2)
 .site-branding {
     transition: all .5s;
 }
+
 .site-title {
     text-align: center;
 }
@@ -396,7 +451,6 @@ color: rgba(0, 0, 0, 0.2)
 
 .social-profiles ul li a:hover {
     color: var(--secondary-color);
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .7);
 }
 
 .copywrite {
@@ -544,34 +598,75 @@ color: rgba(0, 0, 0, 0.2)
 /******* Menu section end *****/
 
 
-/************** Hire Me Page CSS start *****************/
-#hireme-body main h2 {
-color: black;
+/************** About section Page CSS start *****************/
+.hireme-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.hire-content{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.hire-content h3{
+white-space: nowrap;
+font-size: 40px!important;
+padding: 0 20px ;
+min-width: 280px;
+}
+.hire-content p{
+padding: 0 10px ;
+font-size: 22px!important;
+min-width: 60%
+}
+#hire-me{
+    width: 100%;
 }
 .skills{
-    
+    border: 3px solid var(--sixth-color);
+    border-radius: 12px;
+    padding: 30px;
 }
 .skills i {
     margin:0 20px;
-    font-size: 50px;
+    font-size: 30px;
 }
+
 .title-line{
     width: 80%;
     border: 1px solid black;
     margin-bottom: 40px;
 }
+.typewrite{
+    color: var(--secondary-color);
+}
 @media screen and (max-width: 992px){
-    main{
-        margin-top: 200px;
+
+    .hire-content{
+        width: 100%;
+        flex-direction: column;
     }
+    .hire-content h3 {
+        white-space: inherit;
+        font-size: 30px !important;
+        padding: 0;
+            margin-bottom: 20px;
+    }
+
+    .hire-content p {
+        max-width: none;
+        font-size: 16px !important;
+        padding: 0;
+    }
+    
     .skills {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 4px;
+        border: none;
+        padding: 0;
     }
     .skills i {
-        margin-top: 10px;
-        font-size: 40px;
+        margin: 0px 2px;
+        font-size: 18px;
     }
 }
-/************** Hire Me Page CSS End *****************/
+/************** About Me section CSS End *****************/

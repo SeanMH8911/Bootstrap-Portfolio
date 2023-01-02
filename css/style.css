@@ -43,8 +43,8 @@ body {
 }
 main {
     background-color: var(--primary-color);
+    margin-left: 80px;
 }
-
 
 
 /******* Hero section start ********/

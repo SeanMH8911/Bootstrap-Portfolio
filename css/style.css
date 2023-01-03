@@ -53,6 +53,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(176deg, #4c4747, black);
 
 }
 
@@ -210,26 +211,36 @@ cursor:default;
 
 .cube div span {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgb(125, 83, 222), #af46c9, #d03bb0, #e53996, #f0437e);
+    background-image: linear-gradient(to bottom,
+            rgb(125 77 234),
+            #af46c9,
+            #d03bb0,
+            #e53996,
+            #f0437e,
+            #f26f9d);
     transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
     display: flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
+    border-bottom: 2px solid rgb(79 48 151);
+    border-top: 1px solid #7e7e7e;
 }
-.cube div span h2{
+.cube div span h2 {
     position: absolute;
     font-size: 30px;
     color: white;
     transform: translateZ(50px);
+    text-shadow: 0 0 20px #ffffff;
 }
-.cube div span h2:nth-child(1){
-transform: translateZ(0) translateY(10px);
-color: rgba(0, 0, 0, 0.2)
+.cube div span h2:nth-child(1) {
+    transform: translateZ(0) translateY(10px);
+    color: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px -1px 4px #ff00a0de;
 }
 .top {
     position: absolute;
@@ -243,26 +254,24 @@ color: rgba(0, 0, 0, 0.2)
     align-items: center;
     text-align: center;
 }
-.top h2{
-    text-shadow: 1px 1px 10px var(--background-color);
+.top h2 {
+    text-shadow: 1px 1px 20px #dedbe5;
+    transform: translatez(50px);
 }
 
-.top::before{
+.top::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 300px;
-    background-color: #f0437e;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33 20 20 / 50%);
     transform: translateZ(-460px);
     filter: blur(20px);
-    box-shadow: 0 0 120px rgba(125,83,222,0.2),
-    0 0 200px rgba(125,83,222,0.4),
-    0 0 300px rgba(125,83,222,0.6),
-    0 0 400px rgba(125,83,222,0.8),
-    0 0 500px rgba(125,83,222,1),
-
+    box-shadow: 0 0 120px rgb(125 83 222 / 20%), 0 0 200px rgb(125 83 222 / 40%),
+        0 0 300px rgb(125 83 222 / 60%), 0 0 400px rgb(125 83 222 / 56%),
+        0 0 500px rgb(125 83 222 / 12%);
 }
 @media screen and (max-width: 992px){
     .cube div span h2{
@@ -636,6 +645,14 @@ min-width: 60%
     font-size: 30px;
 }
 
+/* .skills ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 2rem;
+            margin: 2rem 0;
+} */
+
 .typewrite{
     color: var(--secondary-color);
 }
@@ -665,8 +682,8 @@ min-width: 60%
         margin-top: 50px;
     }
     .skills i {
-        margin: 0px 2px;
-        font-size: 16px;
+        margin: 0px 4px;
+        font-size: 28px;
     }
 }
 /************** About Me section CSS End *****************/

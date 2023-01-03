@@ -46,6 +46,9 @@ main {
     margin-left: 80px;
 }
 
+li {
+    list-style: none;
+}
 
 /******* Hero section start ********/
 #hero{
@@ -256,7 +259,7 @@ cursor:default;
 }
 .top h2 {
     text-shadow: 1px 1px 20px #dedbe5;
-    transform: translatez(50px);
+    transform: translatez(15px);
 }
 
 .top::before {
@@ -264,8 +267,8 @@ cursor:default;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     background-color: rgb(33 20 20 / 50%);
     transform: translateZ(-460px);
     filter: blur(20px);
@@ -645,14 +648,6 @@ min-width: 60%
     font-size: 30px;
 }
 
-/* .skills ul {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            font-size: 2rem;
-            margin: 2rem 0;
-} */
-
 .typewrite{
     color: var(--secondary-color);
 }
@@ -682,8 +677,8 @@ min-width: 60%
         margin-top: 50px;
     }
     .skills i {
-        margin: 0px 4px;
-        font-size: 28px;
+        margin: 0px 2px;
+        font-size: 24px;
     }
 }
 /************** About Me section CSS End *****************/

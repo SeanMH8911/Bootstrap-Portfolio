@@ -680,5 +680,8 @@ min-width: 60%
         margin: 0px 2px;
         font-size: 24px;
     }
+    .skills ul li i {
+        padding: 1px;
+    }
 }
 /************** About Me section CSS End *****************/

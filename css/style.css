@@ -638,7 +638,11 @@ min-width: 60%
     font-size: 30px;
 }
 
-
+.title-line{
+    width: 80%;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
 .typewrite{
     color: var(--secondary-color);
 }

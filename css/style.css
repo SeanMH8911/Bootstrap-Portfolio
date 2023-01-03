@@ -527,6 +527,36 @@ color: rgba(0, 0, 0, 0.2)
     .copywrite {
         padding-left: 30px;
     }
+    
+    #hire-me {
+        height: auto;
+    }    
+    
+    .hire-content {
+        width: 100%;
+        flex-direction: column;
+    }    
+    
+    .hire-content h3 {
+        white-space: inherit;
+        font-size: 30px !important;
+        padding: 0;
+        margin-bottom: 20px;
+    }    
+    
+    .hire-content p {
+        max-width: none;
+        font-size: 16px !important;
+        padding: 0;    }    .skills {
+        border: none;
+        padding: 0;
+        margin-top: 50px;
+    }          
+    
+    .skills i {
+        margin: 0px 2px;
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -611,7 +641,6 @@ color: rgba(0, 0, 0, 0.2)
 .hire-content{
     display: flex;
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 .hire-content h3{
 white-space: nowrap;
@@ -639,44 +668,7 @@ min-width: 60%
     font-size: 30px;
 }
 
-.title-line{
-    width: 80%;
-    border: 1px solid black;
-    margin-bottom: 40px;
-}
 .typewrite{
     color: var(--secondary-color);
-}
-@media screen and (max-width: 992px){
-   
-    #hire-me{
-       height: auto;
-    }
-    .hire-content{
-        width: 100%;
-        flex-direction: column;
-    }
-    .hire-content h3 {
-        white-space: inherit;
-        font-size: 30px !important;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    .hire-content p {
-        max-width: none;
-        font-size: 16px !important;
-        padding: 0;
-    }
-    
-    .skills {
-        border: none;
-        padding: 0;
-        margin-top: 50px;
-    }
-    .skills i {
-        margin: 0px 2px;
-        font-size: 16px;
-    }
 }
 /************** About Me section CSS End *****************/
